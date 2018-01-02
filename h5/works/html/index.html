@@ -1,0 +1,305 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0" />-->
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../myfont/iconfont.css">
+    <script src="//hm.baidu.com/hm.js?7d1f28af1b39d53a7b2a8a443a9d6624"></script><script src="http://wxfw.kukahome.com/Public/m1/common/js/jquery-1.9.0.min.js?v=171025" type="text/javascript" charset="utf-8"></script>
+    <script src="http://wxfw.kukahome.com/Public/m1/common/js/underscore-min.js?v=171025" type="text/javascript" charset="utf-8"></script>
+    <script src="/source/m1/Gallery/public/js/jquery.lazyload.min.js?v=171025"></script>
+    <!--弹框-->
+    <link rel="stylesheet" href="/Public/Index/css/layer.css?v=171025" type="text/css">
+    <script type="text/javascript" src="/Public/Index/js/layer.m.js?v=171025"></script><link href="" type="text/css" rel="styleSheet" id="layermcss">
+    <script src="http://wxfw.kukahome.com/Public/m1/common/js/iscroll-lite.js?v=171025" type="text/javascript" charset="utf-8"></script>
+    <!-- wxfwtest.kukahome.com Baidu tongji analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?7d1f28af1b39d53a7b2a8a443a9d6624";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style>
+        img{width: 100%;height: auto;}
+        #loading{position: fixed;z-index: 10;width: 100vw;height: 100vh;display: none;}
+        #loading>div{width: 40px;height: 40px;opacity: 0.8;background: #000000;border-radius: 3px;position: absolute;margin: auto;left: 0;top: 0;bottom: 0;right: 0;}
+        #loading>div>img{width: 100%;position: absolute;margin: 0;top: 0;bottom: 0;padding: 5px;}
+        /*.Collection{margin: 0; }
+        .tukutettbox .cpic{width: 18px;position: absolute;margin: auto;top: 0;bottom: 0;}
+        .Collection>span{margin-left: 18px;height: auto;}*/
+        .Collection{width: 55px;right: 10px;}
+        .cpic{margin-top: 4px;height: 15px;width: 15px;float: left;}
+        .Collection > span{font-size: 13px;line-height: 24px;float: right;}
+        .filter_bar .cate_item.p4{width:33% !important }
+    </style>
+</head>
+
+<body class="tuku" style="zoom: 1;">
+<div id="loading" style="display: none;">
+    <div><img src="http://wxfw.kukahome.com/Public/Index/images/loading.gif"></div>
+</div>
+<div class="search_box">
+    <div class="inner">
+        <div class="content_box">
+            <input class="input1" id="queryByType" type="text" value="" placeholder="型号,标题等">
+            <button class="btn1" id="doQueryByType">查找</button>
+        </div>
+    </div>
+</div>
+<div class="subscript_box">
+    <div class="inner">
+        <div class="MySubscription font2" style="height: auto;">
+            <div>
+                <span>我的订阅</span>
+                <div id="more" data-str="">完成</div>
+            </div>
+            <div class="optionBox" style="display: block;">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page tuku">
+    <div class="topbox">
+        <div id="title">
+            <div class="menu_box">
+                <!--<i class="icon_gallery twicelist"></i>-->
+                <i class="iconfont">&#xe6b4;</i>
+                <!--<span>分类</span>-->
+            </div>
+            <div id="title_text">
+                图库列表
+            </div>
+            <div class="ctl_box">
+                <div class="query_box">
+                    <!--<i class="icon_gallery search"></i>-->
+                    <i class="iconfont">&#xe6ac;</i>
+                </div>
+            </div>
+        </div>
+        <div class="filter_bar">
+            <div class="top_cate Lcfx">
+                <a href="javascript:;" data-id="501" class="cate_item p4">
+                    <span>品类</span>
+                    <i class="icon_arrow"></i>
+                </a>
+
+                <a href="javascript:;" data-id="507" class="cate_item p4">
+                    <span>空间</span>
+                    <i class="icon_arrow"></i>
+                </a>
+
+                <a href="javascript:;" data-id="511" class="cate_item p4">
+                    <span>风格</span>
+                    <i class="icon_arrow"></i>
+                </a>
+
+            </div>
+            <div class="main_box">
+                <div id="subTreeLv2_501" class="filter_box filter_t2 Lcfx" style="display: none;">
+                    <div class="lbox" style="height: 564px;">
+                        <div class="wrapper" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                            <a href="javascript:;" data-id="501" data-choice="1" class="litem active">全部</a>
+
+                            <a href="javascript:;" data-id="524" class="litem">皮沙发</a>
+
+                            <a href="javascript:;" data-id="530" class="litem">布艺沙发</a>
+
+                            <a href="javascript:;" data-id="533" class="litem">床</a>
+
+                            <a href="javascript:;" data-id="537" class="litem">床垫</a>
+
+                            <a href="javascript:;" data-id="540" class="litem">客餐厅配套</a>
+
+                            <a href="javascript:;" data-id="547" class="litem">卧室配套</a>
+
+                            <a href="javascript:;" data-id="552" class="litem">全屋定制</a>
+
+                            <a href="javascript:;" data-id="559" class="litem">家居小件</a>
+
+                            <a href="javascript:;" data-id="570" class="litem">单椅</a>
+
+                        </div>
+                    </div>
+                    <div class="rbox" style="height: 564px;">
+                        <div class="wrapper" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+
+                            <div class="ritembox Ldn" id="subTreeLv3_524">
+                                <a href="javascript:;" data-id="524" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="525" class="ritem">休闲系列</a>
+
+                                <a href="javascript:;" data-id="526" class="ritem">功能系列</a>
+
+                                <a href="javascript:;" data-id="527" class="ritem">全皮系列</a>
+
+                                <a href="javascript:;" data-id="528" class="ritem">米檬系列</a>
+
+                                <a href="javascript:;" data-id="529" class="ritem">欧美系列</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_530">
+                                <a href="javascript:;" data-id="530" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="531" class="ritem">缤纷系列</a>
+
+                                <a href="javascript:;" data-id="532" class="ritem">睿致系列</a>
+
+                                <a href="javascript:;" data-id="592" class="ritem">其他</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_533">
+                                <a href="javascript:;" data-id="533" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="534" class="ritem">皮床</a>
+
+                                <a href="javascript:;" data-id="535" class="ritem">布床</a>
+
+                                <a href="javascript:;" data-id="591" class="ritem">实木床</a>
+
+                                <a href="javascript:;" data-id="536" class="ritem">儿童上下床</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_537">
+                                <a href="javascript:;" data-id="537" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="538" class="ritem">1号垫系列</a>
+
+                                <a href="javascript:;" data-id="539" class="ritem">其他床垫</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_540">
+                                <a href="javascript:;" data-id="540" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="541" class="ritem">休闲系列</a>
+
+                                <a href="javascript:;" data-id="542" class="ritem">布艺系列</a>
+
+                                <a href="javascript:;" data-id="543" class="ritem">功能系列</a>
+
+                                <a href="javascript:;" data-id="544" class="ritem">全皮系列</a>
+
+                                <a href="javascript:;" data-id="545" class="ritem">米檬系列</a>
+
+                                <a href="javascript:;" data-id="546" class="ritem">欧美系列</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_547">
+                                <a href="javascript:;" data-id="547" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="548" class="ritem">床头柜</a>
+
+                                <a href="javascript:;" data-id="549" class="ritem">梳妆台</a>
+
+                                <a href="javascript:;" data-id="550" class="ritem">斗柜</a>
+
+                                <a href="javascript:;" data-id="551" class="ritem">其他</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_552">
+                                <a href="javascript:;" data-id="552" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="553" class="ritem">欧罗拉系列</a>
+
+                                <a href="javascript:;" data-id="554" class="ritem">安科纳系列</a>
+
+                                <a href="javascript:;" data-id="555" class="ritem">伯爵世家系列</a>
+
+                                <a href="javascript:;" data-id="556" class="ritem">塞纳河畔系列</a>
+
+                                <a href="javascript:;" data-id="557" class="ritem">邂逅英伦系列</a>
+
+                                <a href="javascript:;" data-id="558" class="ritem">儿童房系列</a>
+
+                                <a href="javascript:;" data-id="593" class="ritem">西西里系列</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_559">
+                                <a href="javascript:;" data-id="559" class="ritem">全部</a>
+
+                                <a href="javascript:;" data-id="560" class="ritem">家纺系列</a>
+
+                                <a href="javascript:;" data-id="561" class="ritem">枕头系列</a>
+
+                                <a href="javascript:;" data-id="562" class="ritem">衣帽架</a>
+
+                                <a href="javascript:;" data-id="563" class="ritem">单人小沙发</a>
+
+                                <a href="javascript:;" data-id="564" class="ritem">拖鞋</a>
+
+                                <a href="javascript:;" data-id="565" class="ritem">厨房小件</a>
+
+                                <a href="javascript:;" data-id="566" class="ritem">收纳小件</a>
+
+                                <a href="javascript:;" data-id="567" class="ritem">地毯</a>
+
+                                <a href="javascript:;" data-id="568" class="ritem">其他</a>
+
+                            </div>
+
+                            <div class="ritembox Ldn" id="subTreeLv3_570">
+                                <a href="javascript:;" data-id="570" class="ritem">全部</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="subTreeLv1_507" class="filter_box filter_t1" style="height: 564px; display: none;">
+                    <div class="wrapper" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                        <a href="javascript:;" data-id="507" data-choice="1" class="item active">全部</a>
+
+                        <a href="javascript:;" data-id="569" class="item"><span>客厅</span></a>
+
+                        <a href="javascript:;" data-id="571" class="item"><span>餐厅</span></a>
+
+                        <a href="javascript:;" data-id="572" class="item"><span>卧室</span></a>
+
+                        <a href="javascript:;" data-id="573" class="item"><span>书房</span></a>
+
+                    </div>
+                </div>
+
+                <div id="subTreeLv1_511" class="filter_box filter_t1" style="height: 564px;">
+                    <div class="wrapper" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                        <a href="javascript:;" data-id="511" data-choice="1" class="item active">全部</a>
+
+                        <a href="javascript:;" data-id="574" class="item"><span>现代简约</span></a>
+
+                        <a href="javascript:;" data-id="575" class="item"><span>北欧</span></a>
+
+                        <a href="javascript:;" data-id="577" class="item"><span>中式</span></a>
+
+                        <a href="javascript:;" data-id="576" class="item"><span>欧美</span></a>
+
+                        <a href="javascript:;" data-id="578" class="item"><span>其他</span></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="box1">&nbsp;</section>
+<section id="tukuBox" class="tukuBox Lovh twice" style="margin: 0;">
+    <article class="tukuTag"><a class="tukubox" href="/Gallery/ImgList/newdetails/ConfigId/2/Id/1694.html"><img src="http://wxfwimg.kukahome.com/uploads/images/2/2017/gallery/59e9a4aedb9f6.png" data-src="http://wxfwimg.kukahome.com/uploads/images/2/2017/gallery/59e9a4aedb9f6.png" onerror="errorSrc($(this))"><span class="imgcontainer" style="background-image:url(http://wxfwimg.kukahome.com/uploads/images/2/2017/gallery/59e9a4aedb9f6.png);"></span></a><div class="tukutettbox"><div class="model"><div class="type"><span>KG.038 爱乐之城</span></div><div class="desc">&nbsp;</div></div><div class="info_box"><div class="icon_box"><i class="icon_gallery share"></i><span>727</span></div><div data-url="/Gallery/index/newdetails/ConfigId/2/Id/1694.html" data-sname="KG.038%20%E7%88%B1%E4%B9%90%E4%B9%8B%E5%9F%8E" onclick="CollectFn($(this))" class="icon_box"><i class="icon_gallery unlike"></i><span>192</span></div><div class="icon_box"><i class="icon_gallery visit"></i><span>10812</span></div></div></div></article>
+</section>
+<div id="loading-foot" style="width: 100%; overflow: hidden; line-height: 30px; text-align: center; color: rgb(192, 192, 192); font-size: 16px;">向上滑动加载更多</div>
+
+</body>
+</html>
